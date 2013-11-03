@@ -1,0 +1,43 @@
+{
+    "name": "hoathis/console-bundle",
+    "description": "The Hoa\\Console Symfony 2 bundle.",
+    "type"       : "symfony-bundle",
+    "keywords"   : ["library", "bundle", "symfony", "console"],
+    "homepage"   : "http://hoa-project.net/",
+    "license"    : "BSD-3-Clause",
+    "authors"    : [
+        {
+            "name": "Julien Bianchi",
+            "email": "julien.bianchi@hoa-project.net"
+        },
+        {
+            "name" : "Ivan Enderlin",
+            "email": "ivan.enderlin@hoa-project.net"
+        },
+        {
+            "name"    : "Hoa community",
+            "homepage": "http://hoa-project.net/"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.3.3",
+        "hoathis/symfony-console-bridge": "*",
+        "symfony/http-kernel": "~2.3.6",
+        "symfony/console": "~2.3.6",
+        "symfony/config": "~2.3.6",
+        "symfony/dependency-injection": "~2.3.6"
+    },
+    "require-dev": {
+        "atoum/atoum": "dev-master"
+    },
+    "target-dir": "Hoathis/Bundle/ConsoleBundle",
+    "autoload": {
+        "psr-0": {
+            "Hoathis\\Bundle\\ConsoleBundle": "."
+        }
+    },
+    "config": {
+        "bin-dir": "bin/"
+    }
+}

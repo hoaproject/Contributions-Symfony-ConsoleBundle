@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service id="hoathis.console.helperSet.helper.cursor" class="Hoathis\SymfonyConsoleBridge\Helper\CursorHelper">
+            <tag name="hoathis.console.helperSet.helper"/>
+        </service>
+
+        <service id="hoathis.console.helperSet.helper.readline" class="Hoathis\SymfonyConsoleBridge\Helper\ReadlineHelper">
+            <tag name="hoathis.console.helperSet.helper"/>
+        </service>
+
+        <service id="hoathis.console.helperSet.helper.window" class="Hoathis\SymfonyConsoleBridge\Helper\WindowHelper">
+            <tag name="hoathis.console.helperSet.helper"/>
+        </service>
+
+        <service id="hoathis.console.helperSet.helper.pager" class="Hoathis\SymfonyConsoleBridge\Helper\PagerHelper">
+            <tag name="hoathis.console.helperSet.helper"/>
+        </service>
+    </services>
+
+</container>

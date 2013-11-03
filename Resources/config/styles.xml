@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service id="hoathis.console.formatter.style.title" class="Hoathis\SymfonyConsoleBridge\Formatter\OutputformatterStyle">
+            <tag name="hoathis.console.formatter.style" foreground="#795290" background="#e4cbf4" options="b"/>
+        </service>
+
+        <service id="hoathis.console.formatter.style.info" class="Hoathis\SymfonyConsoleBridge\Formatter\OutputformatterStyle">
+            <tag name="hoathis.console.formatter.style" foreground="#e4cbf4"/>
+        </service>
+
+        <service id="hoathis.console.formatter.style.comment" class="Hoathis\SymfonyConsoleBridge\Formatter\OutputformatterStyle">
+            <tag name="hoathis.console.formatter.style" foreground="#795290"/>
+        </service>
+
+        <service id="hoathis.console.formatter.style.question" class="Hoathis\SymfonyConsoleBridge\Formatter\OutputformatterStyle">
+            <tag name="hoathis.console.formatter.style" foreground="#de8300"/>
+        </service>
+
+        <service id="hoathis.console.formatter.style.error" class="Hoathis\SymfonyConsoleBridge\Formatter\OutputformatterStyle">
+            <tag name="hoathis.console.formatter.style" foreground="white" background="#FF3333" options="b"/>
+        </service>
+    </services>
+
+</container>
