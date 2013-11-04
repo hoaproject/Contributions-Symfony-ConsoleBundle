@@ -20,7 +20,7 @@
 
         <service id="hoathis.console.helperSet" class="Symfony\Component\Console\Helper\HelperSet"/>
 
-        <service id="hoathis.console.formatter" class="Hoathis\SymfonyConsoleBridge\Formatter\OutputFormatter"/>
+        <service id="hoathis.console.formatter" class="Hoathis\Bundle\ConsoleBundle\Formatter\OutputFormatter"/>
     </services>
 
 </container>

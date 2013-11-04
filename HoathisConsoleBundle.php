@@ -2,8 +2,7 @@
 
 namespace Hoathis\Bundle\ConsoleBundle;
 
-use Hoathis\Bundle\ConsoleBundle\DependencyInjection\Compiler\FormatterStylePass;
-use Hoathis\Bundle\ConsoleBundle\DependencyInjection\Compiler\HelperPass;
+use Hoathis\Bundle\ConsoleBundle\DependencyInjection\Compiler;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
@@ -14,8 +13,8 @@ class HoathisConsoleBundle extends Bundle
         parent::build($container);
 
         $container
-            ->addCompilerPass(new FormatterStylePass())
-            ->addCompilerPass(new HelperPass())
+            ->addCompilerPass(new Compiler\FormatterStylePass())
+            ->addCompilerPass(new Compiler\HelperPass())
         ;
     }
 }

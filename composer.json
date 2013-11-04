@@ -19,10 +19,13 @@
             "homepage": "http://hoa-project.net/"
         }
     ],
-    "minimum-stability": "dev",
     "require": {
         "php": ">=5.3.3",
-        "hoathis/symfony-console-bridge": "*",
+        "hoa/core": "*@dev",
+        "hoa/console": "*@dev",
+        "hoa/string": "*@dev",
+        "hoa/stream": "*@dev",
+        "hoathis/symfony-console-bridge": "dev-master",
         "symfony/http-kernel": "~2.3.6",
         "symfony/console": "~2.3.6",
         "symfony/config": "~2.3.6",
