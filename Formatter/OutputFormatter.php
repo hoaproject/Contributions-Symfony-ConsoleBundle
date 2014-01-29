@@ -2,6 +2,7 @@
 
 namespace Hoathis\Bundle\ConsoleBundle\Formatter;
 
+use Hoathis\SymfonyConsoleBridge\Formatter\OutputFormatterStyle;
 use Symfony\Component\Console\Formatter\OutputFormatter as BaseFormatter;
 
 class OutputFormatter extends BaseFormatter

@@ -20,6 +20,10 @@
         <service id="hoathis.console.helperSet.helper.pager" class="Hoathis\SymfonyConsoleBridge\Helper\PagerHelper">
             <tag name="hoathis.console.helperSet.helper"/>
         </service>
+
+        <service id="hoathis.console.helperSet.helper.tput" class="Hoathis\SymfonyConsoleBridge\Helper\TputHelper">
+            <tag name="hoathis.console.helperSet.helper"/>
+        </service>
     </services>
 
 </container>
