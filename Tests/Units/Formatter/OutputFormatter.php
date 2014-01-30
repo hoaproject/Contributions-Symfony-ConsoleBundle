@@ -4,7 +4,7 @@ namespace Hoathis\Bundle\ConsoleBundle\Tests\Units\Formatter;
 
 use atoum;
 use Hoathis\SymfonyConsoleBridge\Formatter\OutputFormatterStyle;
-use Hoathis\SymfonyConsoleBridge\Formatter\OutputFormatter as TestedClass;
+use Hoathis\Bundle\ConsoleBundle\Formatter\OutputFormatter as TestedClass;
 
 class OutputFormatter extends atoum
 {
