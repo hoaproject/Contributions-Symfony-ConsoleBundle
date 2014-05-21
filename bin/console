@@ -52,5 +52,6 @@ try {
         'error',
         true
     ));
-}
 
+    exit($exception->getCode() ?: 1);
+}
