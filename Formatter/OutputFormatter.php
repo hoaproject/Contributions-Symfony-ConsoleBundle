@@ -2,14 +2,13 @@
 
 namespace Hoathis\Bundle\ConsoleBundle\Formatter;
 
-use Hoathis\SymfonyConsoleBridge\Formatter\OutputFormatterStyle;
-use Symfony\Component\Console\Formatter\OutputFormatter as BaseFormatter;
+use Hoathis\SymfonyConsoleBridge\Formatter;
 
-class OutputFormatter extends BaseFormatter
+class OutputFormatter extends Formatter\OutputFormatter
 {
     public function addStyle($name, $foreground = null, $background = null, array $options = array())
     {
-        $this->setStyle($name, new OutputFormatterStyle($foreground, $background, $options));
+        $this->setStyle($name, new Formatter\OutputFormatterStyle($foreground, $background, $options));
 
         return $this;
     }
