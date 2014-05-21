@@ -14,19 +14,16 @@ cache:
   directories:
     - $COMPOSER_CACHE_DIR
 
-
 before_script:
-    - composer require --prefer-source --dev symfony/http-kernel:${SYMFONY_COMPONENTS_VERSION}
-    - composer require --prefer-source --dev symfony/console:${SYMFONY_COMPONENTS_VERSION}
-    - composer require --prefer-source --dev symfony/config:${SYMFONY_COMPONENTS_VERSION}
-    - composer require --prefer-source --dev symfony/dependency-injection:${SYMFONY_COMPONENTS_VERSION}
-    - composer install
+    - composer require --no-update --prefer-source symfony/http-kernel:${SYMFONY_COMPONENTS_VERSION}
+    - composer require --no-update --prefer-source symfony/console:${SYMFONY_COMPONENTS_VERSION}
+    - composer require --no-update --prefer-source symfony/config:${SYMFONY_COMPONENTS_VERSION}
+    - composer require --prefer-source symfony/dependency-injection:${SYMFONY_COMPONENTS_VERSION}
 
 script:
     - bin/atoum
 
-    - composer create-project --no-interaction symfony/framework-standard-edition:${SYMFONY_COMPONENTS_VERSION} Tests/Functionals
-    - rm -rf Tests/Functionals/composer.lock Tests/Functionals/vendor
+    - composer create-project --no-install --no-interaction --prefer-source symfony/framework-standard-edition:${SYMFONY_COMPONENTS_VERSION} Tests/Functionals
     - Tests/bin/functionals ${TRAVIS_BRANCH}
     - composer --working-dir=Tests/Functionals install
     - Tests/Functionals/bin/console
