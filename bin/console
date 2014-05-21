@@ -32,6 +32,8 @@ $kernel->boot();
 
 try {
     $application = $kernel->getContainer()->get('hoathis.console');
+    $application->setVersion($application->getVersion() . PHP_EOL . '  <info>with HoathisConsoleBundle</info>');
+
     $application->run($input, $kernel->getContainer()->get('hoathis.console.output'));
 } catch (ServiceNotFoundException $exception) {
     $output = new ConsoleOutput();
