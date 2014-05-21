@@ -1,5 +1,5 @@
 {
-    "name": "hoathis/console-bundle",
+    "name": "hoathis/symfony-console-bundle",
     "description": "The Hoa\\Console Symfony 2 bundle.",
     "type"       : "symfony-bundle",
     "keywords"   : ["library", "bundle", "symfony", "console"],
