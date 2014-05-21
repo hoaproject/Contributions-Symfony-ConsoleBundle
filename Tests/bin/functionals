@@ -1,0 +1,20 @@
+#!/usr/bin/env php
+<?php
+
+$json = json_decode(file_get_contents(__DIR__ . '/../Functionals/composer.json'), true);
+
+$json['repositories'] = array(
+    array(
+        'type' => 'vcs',
+        'url' => realpath(__DIR__ . '/../../')
+    )
+);
+
+$json['require']['hoa/console'] = '*@dev';
+$json['require']['hoa/core'] = '*@dev';
+$json['require']['hoa/string'] = '*@dev';
+$json['require']['hoa/stream'] = '*@dev';
+$json['require']['hoathis/symfony-console-bridge'] = '*@dev';
+$json['require']['hoathis/symfony-console-bundle'] = 'dev-' . (isset($argv[1]) ? $argv[1] : 'master');
+
+file_put_contents(__DIR__ . '/../Functionals/composer.json', json_encode($json, defined('JSON_PRETTY_PRINT') ? JSON_PRETTY_PRINT : 0));
