@@ -2,3 +2,4 @@ vendor/
 bin/
 !bin/conshoale
 composer.lock
+Tests/Functionals

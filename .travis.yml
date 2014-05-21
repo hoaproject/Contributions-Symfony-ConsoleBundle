@@ -24,3 +24,9 @@ before_script:
 
 script:
     - bin/atoum
+
+    - composer create-project --no-interaction symfony/framework-standard-edition:${SYMFONY_COMPONENTS_VERSION} Tests/Functionals
+    - rm -rf Tests/Functionals/composer.lock Tests/Functionals/vendor
+    - Tests/bin/functionals ${TRAVIS_BRANCH}
+    - composer --working-dir=Tests/Functionals install
+    - Tests/Functionals/bin/console
