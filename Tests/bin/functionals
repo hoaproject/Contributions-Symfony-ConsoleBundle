@@ -17,4 +17,9 @@ $json['require']['hoa/stream'] = '*@dev';
 $json['require']['hoathis/symfony-console-bridge'] = '*@dev';
 $json['require']['hoathis/symfony-console-bundle'] = 'dev-' . (isset($argv[1]) ? $argv[1] : 'master');
 
+$kernel = file(__DIR__ . '/../Functionals/app/AppKernel.php');
+array_splice($kernel, 18, 0, ',new \Hoathis\Bundle\ConsoleBundle\HoathisConsoleBundle()');
+
+
 file_put_contents(__DIR__ . '/../Functionals/composer.json', json_encode($json, defined('JSON_PRETTY_PRINT') ? JSON_PRETTY_PRINT : 0));
+file_put_contents(__DIR__ . '/../Functionals/app/AppKernel.php', implode('', $kernel));
