@@ -30,7 +30,13 @@ class FormatterStylePass implements CompilerPassInterface
                     $attr
                 );
 
-                $formatter->addMethodCall('addStyle', array($name, $attr['foreground'], $attr['background'], explode(' ', $attr['options'])));
+                if (!empty($attr['options'])) {
+                    $attr['options'] = explode(' ', $attr['options']);
+                }
+
+                array_unshift($attr, $name);
+
+                $formatter->addMethodCall('addStyle', array_values($attr));
             }
         }
     }
