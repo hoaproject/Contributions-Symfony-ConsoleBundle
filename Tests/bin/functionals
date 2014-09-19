@@ -10,11 +10,6 @@ $json['repositories'] = array(
     )
 );
 
-$json['require']['hoa/console'] = '*@dev';
-$json['require']['hoa/core'] = '*@dev';
-$json['require']['hoa/string'] = '*@dev';
-$json['require']['hoa/stream'] = '*@dev';
-$json['require']['hoathis/symfony-console-bridge'] = '*@dev';
 $json['require']['hoathis/symfony-console-bundle'] = 'dev-' . (isset($argv[1]) ? $argv[1] : 'master');
 
 $kernel = file(__DIR__ . '/../Functionals/app/AppKernel.php');

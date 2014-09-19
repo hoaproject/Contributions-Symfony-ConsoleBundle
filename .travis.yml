@@ -25,5 +25,5 @@ script:
 
     - composer create-project --no-install --no-interaction --prefer-source symfony/framework-standard-edition:${SYMFONY_COMPONENTS_VERSION} Tests/Functionals
     - Tests/bin/functionals ${TRAVIS_BRANCH}
-    - composer --working-dir=Tests/Functionals install
-    - Tests/Functionals/bin/console
+    - composer --working-dir=Tests/Functionals install --prefer-source
+    - Tests/Functionals/bin/console --ansi
