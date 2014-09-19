@@ -10,7 +10,12 @@ $json['repositories'] = array(
     )
 );
 
-$json['require']['hoathis/symfony-console-bundle'] = 'dev-' . (isset($argv[1]) ? $argv[1] : 'master');
+$prefix = 'dev-';
+if (preg_match('/^(?:\d+\.?)+/', $argv[1]) > 0) {
+    $prefix = '';
+}
+
+$json['require']['hoathis/symfony-console-bundle'] = $prefix . (isset($argv[1]) ? $argv[1] : 'master');
 
 $kernel = file(__DIR__ . '/../Functionals/app/AppKernel.php');
 
