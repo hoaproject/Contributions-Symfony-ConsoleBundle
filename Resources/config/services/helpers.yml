@@ -1,0 +1,56 @@
+parameters:
+    hoathis.console.helperSet.helper.formatter.class: Symfony\Component\Console\Helper\FormatterHelper
+    hoathis.console.helperSet.helper.dialog.class: Symfony\Component\Console\Helper\DialogHelper
+    hoathis.console.helperSet.helper.progress.class: Symfony\Component\Console\Helper\ProgressHelper
+    hoathis.console.helperSet.helper.table.class: Symfony\Component\Console\Helper\TableHelper
+    hoathis.console.helperSet.helper.cursor.class: Hoathis\SymfonyConsoleBridge\Helper\CursorHelper
+    hoathis.console.helperSet.helper.readline.class: Hoathis\SymfonyConsoleBridge\Helper\ReadlineHelper
+    hoathis.console.helperSet.helper.window.class: Hoathis\SymfonyConsoleBridge\Helper\WindowHelper
+    hoathis.console.helperSet.helper.pager.class: Hoathis\SymfonyConsoleBridge\Helper\PagerHelper
+    hoathis.console.helperSet.helper.tput.class: Hoathis\SymfonyConsoleBridge\Helper\TputHelper
+
+services:
+    hoathis.console.helperSet.helper.formatter:
+        class: %hoathis.console.helperSet.helper.formatter.class%
+        tags:
+            - { name: hoathis.console.helperSet.helper }
+
+    hoathis.console.helperSet.helper.dialog:
+        class: %hoathis.console.helperSet.helper.dialog.class%
+        tags:
+            - { name: hoathis.console.helperSet.helper }
+
+    hoathis.console.helperSet.helper.progress:
+        class: %hoathis.console.helperSet.helper.progress.class%
+        tags:
+            - { name: hoathis.console.helperSet.helper }
+
+    hoathis.console.helperSet.helper.table:
+        class: %hoathis.console.helperSet.helper.table.class%
+        tags:
+            - { name: hoathis.console.helperSet.helper }
+
+    hoathis.console.helperSet.helper.cursor:
+        class: %hoathis.console.helperSet.helper.cursor.class%
+        tags:
+            - { name: hoathis.console.helperSet.helper }
+
+    hoathis.console.helperSet.helper.readline:
+        class: %hoathis.console.helperSet.helper.readline.class%
+        tags:
+            - { name: hoathis.console.helperSet.helper }
+
+    hoathis.console.helperSet.helper.formatter:
+        class: %hoathis.console.helperSet.helper.formatter.class%
+        tags:
+            - { name: hoathis.console.helperSet.helper }
+
+    hoathis.console.helperSet.helper.pager:
+        class: %hoathis.console.helperSet.helper.pager.class%
+        tags:
+            - { name: hoathis.console.helperSet.helper }
+
+    hoathis.console.helperSet.helper.tput:
+        class: %hoathis.console.helperSet.helper.tput.class%
+        tags:
+            - { name: hoathis.console.helperSet.helper }

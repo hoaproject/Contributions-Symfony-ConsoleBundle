@@ -1,0 +1,24 @@
+parameters:
+    hoathis.console.class: Symfony\Bundle\FrameworkBundle\Console\Application
+    hoathis.console.output.class: Hoathis\SymfonyConsoleBridge\Output\ConsoleOutput
+    hoathis.console.helperSet.class: Symfony\Component\Console\Helper\HelperSet
+    hoathis.console.formatter.class: Hoathis\Bundle\ConsoleBundle\Formatter\OutputFormatter
+
+services:
+    hoathis.console:
+        class: %hoathis.console.class%
+        arguments:
+            - @kernel
+        calls:
+            - [ setHelperSet, [ @hoathis.console.helperSet ] ]
+
+    hoathis.console.output:
+        class: %hoathis.console.output.class%
+        calls:
+            - [ setFormatter, [ @hoathis.console.formatter ] ]
+
+    hoathis.console.helperSet:
+        class: %hoathis.console.helperSet.class%
+
+    hoathis.console.formatter:
+        class: %hoathis.console.formatter.class%

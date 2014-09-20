@@ -1,0 +1,28 @@
+parameters:
+    hoathis.console.formatter.style.class: Hoathis\SymfonyConsoleBridge\Formatter\OutputformatterStyle
+
+services:
+        hoathis.console.formatter.style.title:
+            class: %hoathis.console.formatter.style.class%
+            tags:
+                - { name: hoathis.console.formatter.style, foreground: "#795290", background: "#e4cbf4", options: b }
+
+        hoathis.console.formatter.style.info:
+            class: %hoathis.console.formatter.style.class%
+            tags:
+                - { name: hoathis.console.formatter.style, foreground: "#e4cbf4" }
+
+        hoathis.console.formatter.style.comment:
+            class: %hoathis.console.formatter.style.class%
+            tags:
+                - { name: hoathis.console.formatter.style, foreground: "#795290" }
+
+        hoathis.console.formatter.style.question:
+            class: %hoathis.console.formatter.style.class%
+            tags:
+                - { name: hoathis.console.formatter.style, foreground: "#de8300" }
+
+        hoathis.console.formatter.style.error:
+            class: %hoathis.console.formatter.style.class%
+            tags:
+                - { name: hoathis.console.formatter.style, foreground: white, background: "#ff3333", options: b }
