@@ -33,7 +33,8 @@
         "symfony/dependency-injection"  : "~2.3,>=2.3.6|~3.0.0"
     },
     "require-dev": {
-        "atoum/atoum": "dev-master"
+        "atoum/atoum"                : "~1.0",
+        "symfony/expression-language": "~2.4"
     },
     "target-dir": "Hoathis/Bundle/ConsoleBundle",
     "autoload"  : { "psr-0": { "Hoathis\\Bundle\\ConsoleBundle": "." } },

@@ -19,7 +19,7 @@ $json['require']['hoathis/symfony-console-bundle'] = $prefix . (isset($argv[1]) 
 
 $kernel = file(__DIR__ . '/../Functionals/app/AppKernel.php');
 
-array_splice($kernel, 18, 0, 'new \Hoathis\Bundle\ConsoleBundle\HoathisConsoleBundle()');
+array_splice($kernel, 18, 0, 'new \Hoathis\Bundle\ConsoleBundle\HoathisConsoleBundle(),' . PHP_EOL);
 
 file_put_contents(__DIR__ . '/../Functionals/composer.json', json_encode($json, defined('JSON_PRETTY_PRINT') ? JSON_PRETTY_PRINT : 0));
 file_put_contents(__DIR__ . '/../Functionals/app/AppKernel.php', implode('', $kernel));
