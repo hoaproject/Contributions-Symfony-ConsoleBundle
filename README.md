@@ -35,11 +35,46 @@ We encourage you to use the newly provided `bin/console` instead.
 
 Doing so, you will gain acces to all the helpers and stuff provided by this bundle:
 
-* [Output](#output)
-* [Formatter](#formatter)
-* [Helpers](#helpers)
-  * [Window](#window)
-  * [Cursor](#cursor)
-  * [Readline](#readline)
-  * [Pager](#pager)
-  * [Tput](#tput)
+* [Dependency injection](#dependency-injection)
+* [Output](http://central.hoa-project.net/Resource/Contributions/Symfony/ConsoleBridge#output)
+* [Formatter](http://central.hoa-project.net/Resource/Contributions/Symfony/ConsoleBridge#formatter)
+* [Helpers](http://central.hoa-project.net/Resource/Contributions/Symfony/ConsoleBridge#helpers)
+  * [Window](http://central.hoa-project.net/Resource/Contributions/Symfony/ConsoleBridge#window)
+  * [Cursor](http://central.hoa-project.net/Resource/Contributions/Symfony/ConsoleBridge#cursor)
+  * [Readline](http://central.hoa-project.net/Resource/Contributions/Symfony/ConsoleBridge#readline)
+  * [Pager](http://central.hoa-project.net/Resource/Contributions/Symfony/ConsoleBridge#pager)
+  * [Tput](http://central.hoa-project.net/Resource/Contributions/Symfony/ConsoleBridge#tput)
+
+### Dependency injection
+
+#### Services
+
+As said above, this bundle will turn your console into a DIC service. This is not the only thing that has been added to the container.
+Indeed some other components have been added to it. Here are the new services you will get:
+
+* `hoathis.console`: the console application
+* `hoathis.console.output`: the console output
+* `hoathis.console.formatter`: the console output formatter
+* `hoathis.console.helperSet`: the console herlper set
+* `hoathis.console.helperSet.helper.*`: all the available helpers
+* `hoathis.console.formatter.style.*`: all the available formatter styles
+
+You can find the detailed services declarations [here](http://central.hoa-project.net/Resource/Contributions/Symfony/ConsoleBundle/Resources/config/services)
+
+#### Tags
+
+In addition to services definitions, the bundle provides some tags that you can use to add new components. There are two of them:
+
+* `hoathis.console.helperSet.helper` to declare a new helper
+* `hoathis.console.formatter.style` to declare a new formatter style
+
+The first one, `hoathis.console.helperSet.helper`, does not take any value. It's just here to inform the container to add your
+helper instance to the console's helper set.
+
+The last one, `hoathis.console.formatter.style`, can take one or more arguments:
+
+* `foreground` to set the foreground color
+* `background` to set the background color
+* `options` to set the style options
+
+To get more information on how to configure your styles, please read the dedicated section [here](http://central.hoa-project.net/Resource/Contributions/Symfony/ConsoleBridge#formatter).
