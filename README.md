@@ -68,7 +68,7 @@ In addition to services definitions, the bundle provides some tags that you can 
 * `hoathis.console.helperSet.helper` to declare a new helper
 * `hoathis.console.formatter.style` to declare a new formatter style
 
-The first one, `hoathis.console.helperSet.helper`, does not take any value. It's just here to inform the container to add your
+The first one, `hoathis.console.helperSet.helper`, does not take any argument. It's just here to inform the container to add your
 helper instance to the console's helper set.
 
 The last one, `hoathis.console.formatter.style`, can take one or more arguments:
