@@ -7,7 +7,8 @@ Moreover, Hoa aims at being a bridge between industrial and research worlds.
 
 ## Installation
 
-Add these lines to your `require` section:
+With [Composer](http://getcomposer.org/), to include this library into your dependencies, you need to require
+[`hoathis/symfony-console-bundle`](https://packagist.org/packages/hoathis/symfony-console-bundle):
 
 ```json
 {
@@ -17,7 +18,9 @@ Add these lines to your `require` section:
 }
 ```
 
-Then install dependencies:
+Please, read the website to [get more informations about how to install](http://hoa-project.net/Source.html).
+
+Finally, install dependencies:
 
 ```sh
 $ composer update hoathis/symfony-console-bundle
